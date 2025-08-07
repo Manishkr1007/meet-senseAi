@@ -57,6 +57,23 @@ export const SignUpViews = () => {
                 },
             });
     }
+     const onSocial = (provider:"github"|"google") => {
+        setPending(true);
+        setError(null);
+        authClient.signIn.social({
+            provider: provider,
+            callbackURL:"/"
+
+                   },
+            {
+              onSuccess: () => {
+                    setPending(false);
+                },
+              onError: ({ error }) => {
+                    setError(error.message);
+                },
+            });
+    }
     return (
         <div className="flex flex-col gap-6">
             <Card className="overflow-hidden p-0">
@@ -172,6 +189,7 @@ export const SignUpViews = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     <Button
+                                        onClick={() =>onSocial("google")}
                                         variant="outline"
                                         type="button"
                                         disabled={pending}
@@ -180,6 +198,7 @@ export const SignUpViews = () => {
                                         Google
                                     </Button>
                                     <Button
+                                        onClick={() =>onSocial("github")}   
                                         variant="outline"
                                         type="button"
                                         disabled={pending}
