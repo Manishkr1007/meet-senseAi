@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@radix-ui/react-dropdown-menu";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@/components/ui/dropdown-menu";
 import { ChevronRightIcon, MoreVerticalIcon, PencilIcon, TrashIcon } from "lucide-react";
 
 interface Props {
@@ -57,11 +57,11 @@ export const AgentIdViewHeader = ({
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                    <DropdownMenuItem onClick={onEdit}>
+                    <DropdownMenuItem onClick={onEdit} >
                     <PencilIcon className="size-4 text-black" />
                         Edit
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={onRemove}>
+                    <DropdownMenuItem onClick={onRemove} >
                     <TrashIcon className="size-4 text-black" />
                         Delete
                     </DropdownMenuItem>
