@@ -17,7 +17,7 @@ export const NewMeetingDialog = ({open, onOpenChange}:NewMeetingDialogProps) => 
             router.push(`/meetings/${id}`); // Navigate to the new meeting page
             // Optionally, you can navigate to the new meeting page or perform other actions
           }}
-            onCancel={()=>onOpenChange}
+            onCancel={()=>onOpenChange(false)}
           />
         </ResponsiveDialog>
     );
