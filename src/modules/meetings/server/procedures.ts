@@ -14,9 +14,44 @@ import {
   MAX_PAGE_SIZE,
   MIN_PAGE_SIZE,
 } from "@/constants";
+import { meetingsInsertSchema, meetingsUpdateSchema } from "../schemas";
 
 export const meetingsRouter = createTRPCRouter({
- 
+     update:ProctectedProcedure
+        .input(meetingsUpdateSchema)
+        .mutation(async ({input ,ctx})=>{
+            
+            const [updatedMeeting] = await db
+            .update(meetings)
+            .set(input)
+            .where(
+                and(
+                    eq(meetings.id, input.id),
+                    eq(meetings.userId, ctx.auth.user.id)
+                )
+            )
+            .returning();
+            if (!updatedMeeting) {
+                throw new TRPCError({
+                    code: "NOT_FOUND",
+                    message: "Agent not found.",
+                });
+            }
+            return updatedMeeting;
+        }),
+ create: ProctectedProcedure.input(meetingsInsertSchema).mutation(
+     async ({ input, ctx }) => {
+       const [createdMeeting] = await db
+         .insert(meetings)
+         .values({
+           ...input,
+           userId: ctx.auth.user.id,
+           
+         })
+         .returning();
+       return createdMeeting;
+     }
+   ),
   getOne: ProctectedProcedure.input(z.object({ id: z.string() })).query(
     async ({ input ,ctx }) => {
       const [existingMeeting] = await db
