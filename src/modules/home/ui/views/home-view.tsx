@@ -38,8 +38,8 @@ export const HomeView = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-800 text-white">
-        <div className="absolute inset-0 bg-grid-white/5 mask-linear-gradient-to-b from-transparent to-blue-900"></div>
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-green-900 via-red-900 to-green-800 text-white">
+        <div className="absolute inset-0 bg-grid-white/5 mask-linear-gradient-to-b from-transparent to-green-900"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl">
@@ -49,7 +49,7 @@ export const HomeView = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Transform Your Meetings with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Assistants</span>
+                Transform Your Meetings with <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-400">AI Assistants</span>
               </motion.h1>
               <motion.p 
                 className="text-lg md:text-xl text-gray-300 mb-8"
@@ -67,8 +67,8 @@ export const HomeView = () => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
-                  onClick={() => router.push('/dashboard/meetings/new')}
+                  className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white"
+                  onClick={() => router.push('/meetings')}
                 >
                   Schedule Meeting <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -76,7 +76,7 @@ export const HomeView = () => {
                   size="lg" 
                   variant="outline" 
                   className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-                  onClick={() => router.push('/dashboard/agents')}
+                  onClick={() => router.push('/agents')}
                 >
                   Explore AI Agents
                 </Button>
@@ -88,11 +88,11 @@ export const HomeView = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg p-1">
+              <div className="bg-gradient-to-br from-white to-green-700 rounded-lg p-1">
                 <div className="bg-gray-900 rounded-lg h-full flex items-center justify-center p-8">
                   <div className="flex items-center gap-6">
-                    <div className="relative w-24 h-24 rounded-full border-4 border-purple-500 flex items-center justify-center bg-gray-800">
-                      <Bot className="w-12 h-12 text-purple-400" />
+                    <div className="relative w-24 h-24 rounded-full border-4 border-green-500 flex items-center justify-center bg-gray-800">
+                      <Bot className="w-12 h-12 text-green-400" />
                     </div>
                     <div className="relative">
                       <div className="absolute -top-8 -left-6 w-40 h-6 bg-blue-500/20 rounded-full blur-lg"></div>
@@ -136,7 +136,7 @@ export const HomeView = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to upgrade your meetings?</h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto">
@@ -146,7 +146,7 @@ export const HomeView = () => {
             <Button 
               size="lg" 
               className="bg-white text-blue-600 hover:bg-gray-100"
-              onClick={() => router.push('/dashboard')}
+              onClick={() => router.push('/')}
             >
               Get Started <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
@@ -154,7 +154,7 @@ export const HomeView = () => {
               size="lg" 
               variant="outline" 
               className="bg-transparent hover:bg-white/10 text-white border-white"
-              onClick={() => router.push('/dashboard/agents')}
+              onClick={() => router.push('/agents')}
             >
               View Demos
             </Button>
