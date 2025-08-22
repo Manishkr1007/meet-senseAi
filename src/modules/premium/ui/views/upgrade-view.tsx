@@ -20,17 +20,17 @@ export const UpgradeView = () => {
     <div className="flex-1 py-4 px-4 md:px-8 flex flex-col gap-y-10">
       <div className="mt-4 flex-1 flex flex-col gap-y-10 items-center">
         <h5 className="font-medium text-2xl md:text-3xl">
-          Bạn đang sử dụng gói{" "}
+          You are using the package {" "}
           <span className="font-semibold text-primary">
             {currentSubscription?.name ?? "Free"}
           </span>{" "}
-          kế hoạch
+          plan
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {products.map((product) => {
             const isCurrentProduct = currentSubscription?.id === product.id;
             const isPremium = !!currentSubscription;
-            let buttonText = "Nâng cấp";
+            let buttonText = "Upgrade";
             let onClick = () => authClient.checkout({ products: [product.id] });
 
             if (isCurrentProduct) {

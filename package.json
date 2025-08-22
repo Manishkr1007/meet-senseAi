@@ -10,7 +10,6 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev:webhook": "ngrok http --url=vaguely-grown-rattler.ngrok-free.app 3000"
-
   },
   "dependencies": {
     "@dicebear/collection": "^9.2.2",
@@ -64,6 +63,7 @@
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.43.1",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.23.12",
     "humanize-duration": "^3.32.2",
     "inngest": "^3.38.0",
     "input-otp": "^1.4.2",
