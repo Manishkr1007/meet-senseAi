@@ -28,7 +28,9 @@ const Page = async ({ params }: Props) => {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
+      <div className="h-screen w-full">
       <CallView meetingId={meetingId} />
+      </div>
     </HydrationBoundary>
   );
 };
