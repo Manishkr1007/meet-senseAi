@@ -114,7 +114,7 @@ export const MeetingForm = ({
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Tên</FormLabel>
+                <FormLabel>New</FormLabel>
                 <FormControl>
                   <Input placeholder="e.g. Math Consultations" {...field} />
                 </FormControl>
@@ -127,7 +127,9 @@ export const MeetingForm = ({
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Tác nhân</FormLabel>
+                <FormLabel>
+                  Agent
+                </FormLabel>
                 <FormControl>
                   <CommandSelect
                     options={(agents.data?.items ?? []).map((agent) => ({
@@ -147,7 +149,7 @@ export const MeetingForm = ({
                     onSelect={field.onChange}
                     onSearch={setAgentSearch}
                     value={field.value}
-                    placeholder="Chọn một tác nhân"
+                    placeholder="Select an agent"
                   />
                 </FormControl>
                 <FormDescription>
