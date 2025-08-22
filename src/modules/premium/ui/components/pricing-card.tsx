@@ -115,7 +115,7 @@ export const PricingCard = ({
         {buttonText}
       </Button>
       <div className="flex flex-col gap-y-2 mt-6">
-        <p className="font-medium uppercase">Tính năng</p>
+        <p className="font-medium uppercase">Features</p>
         <ul
           className={cn(
             "flex flex-col gap-y-2.5",

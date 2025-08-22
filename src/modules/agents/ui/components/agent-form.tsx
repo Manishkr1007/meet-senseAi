@@ -103,9 +103,9 @@ export const AgentForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Tên</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="e.g. Tác nhân" />
+                <Input {...field} placeholder="e.g. Meeting Assistant" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -116,11 +116,11 @@ export const AgentForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Instruct</FormLabel>
+              <FormLabel>Instructions</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="Bạn là một tác nhân hữu ích có thể trả lời các câu hỏi và giúp đỡ với các vấn đề khác."
+                  placeholder="You are a helpful agent that can answer questions and assist with various tasks during meetings."
                 />
               </FormControl>
               <FormMessage />

@@ -38,10 +38,10 @@ export const useConfirm = (
           variant="outline"
           className="w-full lg:w-auto"
         >
-          Hủy bỏ
+          Cancel
         </Button>
         <Button onClick={handleConfirm} className="w-full lg:w-auto">
-          Xác nhận
+          Confirm
         </Button>
       </div>
     </ResponsiveDialog>

@@ -15,8 +15,8 @@ export const ActiveState = ({ meetingId }: Props) => {
     >
       <EmptyState
         image="/upcoming.svg"
-        title="Cuộc họp đang hoạt động"
-        description="Cuộc họp sẽ kết thúc khi tất cả những người tham gia đã rời đi"
+        title="Meeting in Progress"
+        description="The meeting will end when all participants have left"
       />
       <div className="flex flex-col-reverse lg:flex-row lg:justify-center items-center gap-2 w-full">
         <Button asChild className="w-full lg:w-auto">
