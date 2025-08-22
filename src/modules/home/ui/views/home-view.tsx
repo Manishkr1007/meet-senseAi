@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
+
 import { useRouter } from "next/navigation";
 import { CalendarCheck2, Video, Bot, ArrowRight, ChevronRight, Users, BrainCircuit, Clock, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ import { motion } from "framer-motion";
 
 export const HomeView = () => {
   const router = useRouter();
-  const [isHovering, setIsHovering] = useState<number | null>(null);
+
   
   const features = [
     { 
