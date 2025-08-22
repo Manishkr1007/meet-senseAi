@@ -3,7 +3,7 @@ import { botttsNeutral, initials } from "@dicebear/collection";
 
 interface Props{
     seed?: string;
-    variant?: "bottsNeutral" | "initials";
+    variant?: "botttsNeutral" | "initials";
 };
 
 export const generateAvatarUri = ({
@@ -11,7 +11,7 @@ export const generateAvatarUri = ({
     variant ,
 }: Props) => {
     let avatar;
-    if(variant === "bottsNeutral") {
+    if(variant === "botttsNeutral") {
         avatar = createAvatar(botttsNeutral, {
             seed,
         });
